@@ -42,7 +42,48 @@
  </script>
 @endsection
 
+ <!-- Banner Area -->
+    <div id="banner" class="banner">
+        <div class="banner-item banner-1 steller-parallax" data-stellar-background-ratio="0.5">
+            <div class="banner-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="banner-text-content">
+                                <h1 class="banner-title"> {{  settings()->namear  }}</h1>
+                                <p class="banner-text">@if(session('lang')=='ar')
+                             {!! $WhoWeAre->WhoWeAre_name_ar !!}
 
+                        @endif
+
+                        @if(session('lang')=='en')
+                            {!! $WhoWeAre->WhoWeAre_name_en !!}
+
+                        @endif
+                                </p>
+                                <div class="button-group">
+                                    <a    href="#feature"   class="btn btn-lg btn-download">
+                                        <i class="fa fa-apple"></i> {{__('trans.features')}}</a>
+
+
+                                    <a    class="btn btn-lg btn-download" href="#contact"  >
+                                        <i class="fa fa-android"></i> {{__('trans.contact')}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 hidden-sm hidden-xs">
+                            <div class="mock right-style">
+                               
+                                <img class="front-mock wow fadeInUp" data-wow-duration="1.5s"
+                                     src="{{url('/')}}/{{settings()->siteflag }}" alt="mock front">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner Area End -->
   
 
     <div class="main-wrap">
@@ -218,12 +259,7 @@
                     </div>
                 </div>
                 <div class="row">
-
-                      @if ($errors->has('g-recaptcha-response'))
-    <span class="help-block">
-        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-    </span>
-@endif
+ 
 
                     <div class="col-md-6 col-xs-12">
                         <form id="contactForm" class="contact-form" 

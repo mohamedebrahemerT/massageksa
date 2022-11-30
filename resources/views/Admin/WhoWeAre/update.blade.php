@@ -676,8 +676,7 @@
        <li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-info"></i> {{trans('admin.WhoWeAre_name_en')}}</a></li>
 
        <li><a data-toggle="tab" href="#department"><i class="fa fa-circle"></i> {{trans('admin.WhoWeAre_name_arr')}}</a></li>
- 
-             <li><a data-toggle="tab" href="#menu5"><i class="fa fa-camera"></i> {{trans('admin.photo')}}</a></li>
+  
 
     
   </ul>  
@@ -689,8 +688,7 @@
 
         @include('Admin.WhoWeAre.updattabs.WhoWeAre_name_en')
               @include('Admin.WhoWeAre.updattabs.WhoWeAre_name_ar')
-        
-          @include('Admin.WhoWeAre.updattabs.photo')
+      
                <div class="form-group"> 
 
   </div>

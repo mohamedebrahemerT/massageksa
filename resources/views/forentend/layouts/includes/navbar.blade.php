@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right" id="one-page-nav">
                 @if((request()->segment(1) != 'privacy') || (request()->segment(1) != 'terms'))
-                    <li><a href="#description">{{__('trans.home')}}</a></li>
+                    <li><a href="#banner">{{__('trans.home')}}</a></li>
                     <li><a href="#description">{{__('trans.about_us')}}</a></li>
                     <li><a href="#feature">{{__('trans.features')}}</a></li>
                     <li><a href="#screenshot">{{__('trans.screenshot')}} </a></li>
