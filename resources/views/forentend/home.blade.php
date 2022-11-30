@@ -62,9 +62,9 @@
                     <div class="col-lg-5 col-md-3 col-sm-4 text-center">
                         <div class="mock">
                             <img class="back-mock wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"
-                                 src="{{'landing'}}/images/mocks/features-mock-back.png" alt="mock back">
+                                 src="{{url('/')}}/{{substr($WhoWeAre->photo, -29) }}" alt="mock back">
                             <img class="front-mock wow fadeInUp" data-wow-duration="1.5s"
-                                 src="{{'landing'}}/images/mocks/features-mock-front.png" alt="mock front">
+                                 src="{{url('/')}}/{{substr($WhoWeAre->photo, -29) }}" alt="mock front">
                         </div>
                     </div>
                     <div class="col-lg-6 col-lg-offset-1 col-md-7 col-md-offset-2 col-sm-6 col-sm-offset-2">
@@ -198,9 +198,10 @@
                         <div class="screenshot-wrap">
                             <div class="owl-carousel screenshot-carousel" id="screenshot-carousel">
 @foreach(App\Maincategories::get() as $key => $Slider)
+
+                                <img src="{{url('/')}}/{{Storage::url($Slider->photo)}}" alt="App Screenshot">
                                 
-                                <img src="{{'landing'}}/images/screenshot/1.jpg" alt="App Screenshot">
-                                
+                        @endforeach
                                   
                                  
                             </div>
