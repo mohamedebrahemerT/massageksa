@@ -190,26 +190,19 @@ class MaincategoriessController extends Controller
       public function update_img_dropzon_Maincategories($id ,Request $request)
                {
 
-                  if (request()->hasFile('file')) 
-    {
+                          if ($request->file) 
+               {
 
-        $imageName = time().'.'.$request->file->extension();  
-
-   
-
-            $data['photo']=$request->file->move(public_path('images'), $imageName);
-
-} 
-
-                if (request()->has('file')) 
-                {
-
+            $imageName = time() . '.' . $request->file->extension();
+            $request->file->move(public_path('/images/Maincategories'), $imageName);
+            $data['photo'] = 'images/Maincategories/'.$imageName;
                     $settings = Maincategories::find($id);  
       Maincategories::where('id', $id)->update($data);
-                   
-          return $data['photo'];
-                    
+ 
+ 
                 }
+
+              
              
                 
                }

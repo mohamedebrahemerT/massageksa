@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{  settings()->name  }}</title>
+    <title>{{  settings()->namear  }}</title>
     
     <meta name="title" content="{{ settings()->name }}">
     <meta name="description" content="{!! settings()->about_desc !!}">

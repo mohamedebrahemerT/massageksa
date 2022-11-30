@@ -85,59 +85,28 @@ class setting extends Controller
             ]);
          */
                  //return request();
-             
-             
-                  $data['siteflag']  = up::upload(
-                     [
-                        "file"=>"siteflag",
-                        "upload_type"=> "single",
-                        "delte_file"=> settings()->siteflag,
-                        "path" => "settings",
 
-                        
+                    if ($request->siteflag) 
+               {
 
-                     ]
-
-                  ); 
-
-                     $data['sitesymol']  = up::upload(
-                     [
-                        "file"=>"sitesymol",
-                        "upload_type"=> "single",
-                        "path" => "settings",
-                        "delte_file"=>settings()->sitesymol,
-                      
-
-                     ]
-
-                  ); 
-                  /*
- 
-                 if (request()->has('siteflag') ) 
-                 {
-                    if (!empty(settings()->siteflag))
-                     {
-                        Storage::delete(settings()->siteflag);
-                     }
-                   $data['siteflag']=request()->file('siteflag')->store('settings');
-
-                      
+            $imageName = time() . '.' . $request->siteflag->extension();
+            $request->siteflag->move(public_path('/images/siteflag'), $imageName);
+            $data['siteflag'] = 'images/siteflag/'.$imageName;
                   
-                 }
-                 if (request()->hasfile('sitesymol'))
-                  {
-                    if (!empty(settings()->sitesymol))
-                     {
-                        Storage::delete(settings()->sitesymol);
-                     }
-                     $data['sitesymol']=request()->file('sitesymol')->store('settings');
-                     
-                 
-                     
-                 }
-                 */
+ 
+                }
 
-             // $data=request()->except('_token','_method');  
+                     if ($request->sitesymol) 
+               {
+
+            $imageName = time() . '.' . $request->sitesymol->extension();
+            $request->sitesymol->move(public_path('/images/sitesymol'), $imageName);
+            $data['sitesymol'] = 'images/sitesymol/'.$imageName;
+                  
+ 
+                }
+             
+                 
 
                settings::orderBy('id','desc')->update($data);
              session()->flash('success',trans('admin.dataaddsuccessfully'));
@@ -145,7 +114,7 @@ class setting extends Controller
 
         return redirect('admin/settings');
 
-     	//return Request();*/
+      
      } 
 
 

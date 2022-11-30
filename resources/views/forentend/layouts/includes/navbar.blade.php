@@ -17,7 +17,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{url('/')}}">
-                <img src="{{url('/')}}{{Storage::url(settings()->sitesymol) }}" alt="Site Logo" style="height: 92px;">
+                <img src="{{url('/')}}/{{settings()->sitesymol }}" alt="Site Logo" style="height: 92px;">
             </a>
         </div>
 

@@ -196,27 +196,20 @@ class WhoWeAresController extends Controller
       public function update_img_dropzon_FAQs($id  ,Request $request)
                {
 
+                      if ($request->file) 
+               {
 
-                  if (request()->hasFile('file')) 
-    {
-
-        $imageName = time().'.'.$request->file->extension();  
-
-   
-
-            $data['photo']=$request->file->move(public_path('images'), $imageName);
-
-} 
-
-                if (request()->has('file')) 
-                {
-
+            $imageName = time() . '.' . $request->file->extension();
+            $request->file->move(public_path('/images/WhoWeAre'), $imageName);
+            $data['photo'] = 'images/WhoWeAre/'.$imageName;
                     $settings = WhoWeAre::find($id);  
       WhoWeAre::where('id', $id)->update($data);
-
-          return $data['photo'];
-                    
+ 
+ 
                 }
+ 
+
+               
 
              
                 

@@ -61,19 +61,14 @@ class DepartmentsController extends Controller {
 			]);
 
  
+if ($request->icon) 
+               {
 
-
- 	   	if (request()->hasFile('icon')) 
-  	{
-
-        $imageName = time().'.'.$request->icon->extension();  
-
-   
-
-           $data['icon']=$request->icon->move(public_path('images'), $imageName);
-
-} 
-
+            $imageName = time() . '.' . $request->icon->extension();
+            $request->icon->move(public_path('/images/Department'), $imageName);
+            $data['icon'] = 'images/Department/'.$imageName;
+           }   
+ 
 		 
 
 		
@@ -138,18 +133,15 @@ class DepartmentsController extends Controller {
 			]);
 
 	 
+   if ($request->icon) 
+               {
 
+            $imageName = time() . '.' . $request->icon->extension();
+            $request->icon->move(public_path('/images/Department'), $imageName);
+            $data['icon'] = 'images/Department/'.$imageName;
+           }     
 
-		   	if (request()->hasFile('icon')) 
-  	{
-
-        $imageName = time().'.'.$request->icon->extension();  
-
-   
-
-           $data['icon']=$request->icon->move(public_path('images'), $imageName);
-
-}
+		 
 	
 
 		Department::where('id', $id)->update($data);

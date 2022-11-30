@@ -565,7 +565,9 @@
     {{ Form::label('siteflag', trans('admin.siteflag'))  }}
      {{ Form::file('siteflag',old('siteflag'),['class'=>'form-control'])  }}
         @if(!empty(settings()->siteflag))
-     <img src="{{Storage::url(settings()->siteflag) }}" style="width:50px;height:50px">
+    
+
+     <img src="{{url('/')}}/{{settings()->siteflag }}" alt="Site Logo" style="height: 92px;">
      @endif                
      </div> 
 
@@ -576,7 +578,7 @@
      {{ Form::file('sitesymol',old('sitesymol'),['class'=>'form-control'])  }}
    
     @if(!empty(settings()->sitesymol))
-     <img src="{{Storage::url(settings()->sitesymol) }}" style="width:50px;height:50px">
+  <img src="{{url('/')}}/{{settings()->sitesymol }}" alt="Site Logo" style="height: 92px;">
      @endif
      </div> 
  

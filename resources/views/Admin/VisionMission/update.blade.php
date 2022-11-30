@@ -33,8 +33,8 @@
           var VisionMission_name_ar = $('.VisionMission_name_ar').val();       
         
 
-          // var VisionMission_name_en = CKEDITOR.instances.VisionMission_name_en.getData();
-         // var VisionMission_name_ar = CKEDITOR.instances.VisionMission_name_ar.getData();
+        var VisionMission_name_en = CKEDITOR.instances.VisionMission_name_en.getData();
+          var VisionMission_name_ar = CKEDITOR.instances.VisionMission_name_ar.getData();
               
            var From_data=$('#save_from_data').serialize();
     

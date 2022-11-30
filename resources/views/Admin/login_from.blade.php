@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Log in</title>
+  <title> {{  settings()->namear  }} </title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -24,13 +24,14 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;500&display=swap" rel="stylesheet"> 
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="    font-family: 'Cairo', sans-serif;text-align: right !important;direction: rtl;">
 <div class="login-box">
   <div class="login-logo">
-    <a href="{{url('')}}"><b>Admin</b></a>
+    <a href="{{url('')}}"><b>   {{  settings()->namear  }} </b></a>
 
   
   </div>
@@ -51,31 +52,24 @@
    @endif
 
    
-    <p class="login-box-msg">Sign in to start your session</p>
+  
 
     <form action="{{url('admin_form_post')}}" method="post">
       {{ csrf_field() }}
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email" name="email">
+        <input type="email" class="form-control" placeholder="البريد الإلكتروني" name="email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="password">
+        <input type="password" class="form-control" placeholder="كلمة المرور" name="password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox" value="1" name="Remember"> Remember Me
-            </label>
-          </div>
-        </div>
-        <!-- /.col -->
+         
+      
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-
-         {{aurl('/test')}}
+          <button type="submit" class="btn btn-primary btn-block btn-flat">دخول</button>
+ 
 
         </div>
         <!-- /.col -->
@@ -84,8 +78,7 @@
 
 
 
-    <a href="{{url('forgot_admin_password')}}">I forgot my password</a><br>
-    <a href="{{url('addmin__register')}}" class="text-center">Register a neww membership</a>
+ 
 
   </div>
   <!-- /.login-box-body -->

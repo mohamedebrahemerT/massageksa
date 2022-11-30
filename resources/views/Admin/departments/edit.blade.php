@@ -605,9 +605,11 @@ $(document).ready(function(){
         <div class="form-group"> 
             {!! Form::label('icon',trans('admin.icon')) !!}   wdith 480 px and  height 380
             {!! Form::file('icon',['class'=>'form-control']) !!}
-            @if(!empty($department->icon) and Storage::has($department->icon))
-             <img src="{{url('/')}}/{{substr($department->icon, -29) }}" style="width:100px;height: 100px;">
-            @endif
+                 @if($department->icon)
+                                             <img src="{{url('/')}}/{{$department->icon}}"  style="width:200px;height:200px">
+                                              @else
+                                          
+                                                @endif
         </div>
 
          

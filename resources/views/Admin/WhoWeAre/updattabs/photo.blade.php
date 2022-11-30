@@ -53,7 +53,7 @@
                 id:' ',
                };
                this.emit('addedfile',mock);
-this.options.thumbnail.call(this,mock,"{{Storage::url($WhoWeAre->photo)}}" );
+this.options.thumbnail.call(this,mock,"{{url('/')}}/{{$WhoWeAre->photo }}" );
                $('.dz-progress').remove();
                @endif
 
