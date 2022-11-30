@@ -123,7 +123,7 @@
                              
 
                             <img class="front-mock wow fadeInUp" data-wow-duration="1.5s"
-                                 src="{{url('/')}}/{{settings()->siteflag }}" alt="mock front">
+                                 src="{{url('/')}}/{{settings()->siteflag }}" alt="mock front" style="width:200;height: 300px;">
                         </div>
                     </div>
                     <div class="col-lg-6 col-lg-offset-1 col-md-7 col-md-offset-2 col-sm-6 col-sm-offset-2">
