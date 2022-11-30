@@ -25,7 +25,7 @@ class contactforentcontrller extends Controller
           
                  'email' =>'required',
                 'phone'    => 'sometimes|nullable|',
-                'CompanyName'    => 'sometimes|nullable|',
+          
                 
                 'message'    => 'required',
             

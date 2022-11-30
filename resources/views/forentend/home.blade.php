@@ -266,17 +266,15 @@
 
                     <div class="col-md-6 col-xs-12">
                         <form id="contactForm" class="contact-form" 
-                        action="{{url('/')}}/contact" method="post">
+                       action="{{url('/')}}/Sendcontact" method="post">
                             @csrf
                             <p>
                                 <input id="name" type="text" name="name" placeholder="{{__('trans.contact3')}}" required>
                             </p>
                             <p>
-                                <input id="email" type="email" name="email" placeholder="{{__('trans.contact4')}}" required>
+                                <input id="phone" type="text" name="phone" placeholder="{{__('trans.contact4')}}" required>
                             </p>
-                            <p>
-                                <input id="subject" type="text" name="subject" placeholder="{{__('trans.contact5')}}" required>
-                            </p>
+                            
                             <p>
                                 <textarea id="message" name="message" placeholder="{{__('trans.contact6')}}" rows="5"
                                           required></textarea>

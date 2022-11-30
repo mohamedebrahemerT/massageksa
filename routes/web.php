@@ -206,7 +206,7 @@ Route::get('/pen/{id}', 'ServicesController@pencat');
 
 Route::get('/Ourworks ', 'Ourworksforentcontrller@Ourworks');
 Route::get('/FAQs ', 'FAQsforentcontrller@FAQs');
-Route::get('/contact', 'contactforentcontrller@contact');
+ 
 Route::get('/SignIn', 'SignInforentcontrller@SignIn');
 Route::get('/registration', 'registrationforentcontrller@registration');
 
@@ -308,5 +308,11 @@ Route::get('/Storage-Linked', function () {
 
 
 
+Route::group(['namespace'=>'Forent'],function(){
+Route::get('/','ForentController@index');
+Route::post('/contact','ForentController@contact');
+ 
+ 
 
+});
 
