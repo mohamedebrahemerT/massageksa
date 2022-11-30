@@ -40,16 +40,16 @@
      
 
 
-<link rel="shortcut icon" href="{{url('/')}}/{{ settings()->logo  }}" type="image/x-icon" />
+<link rel="shortcut icon" href="{{url('/')}}/{{settings()->sitesymol }}" type="image/x-icon" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="apple-touch-icon" sizes="57x57" href="{{url('/')}}/{{ settings()->logo  }}" />
-<link rel="apple-touch-icon" sizes="72x72" href="{{url('/')}}/{{ settings()->logo  }}" />
-<link rel="apple-touch-icon" sizes="76x76" href="{{url('/')}}/{{ settings()->logo  }}" />
-<link rel="apple-touch-icon" sizes="114x114" href="{{url('/')}}/{{ settings()->logo  }}" />
-<link rel="apple-touch-icon" sizes="120x120" href="{{url('/')}}/{{ settings()->logo  }}" />
-<link rel="apple-touch-icon" sizes="144x144" href="{{url('/')}}/{{ settings()->logo  }}" />
-<link rel="apple-touch-icon" sizes="152x152" href="{{url('/')}}/{{ settings()->logo  }}" />
-<link rel="apple-touch-icon" sizes="180x180" href="{{url('/')}}/{{ settings()->logo  }}" />
+<link rel="apple-touch-icon" sizes="57x57" href="{{url('/')}}/{{settings()->sitesymol }}" />
+<link rel="apple-touch-icon" sizes="72x72" href="{{url('/')}}/{{settings()->sitesymol }}" />
+<link rel="apple-touch-icon" sizes="76x76" href="{{url('/')}}/{{settings()->sitesymol }}" />
+<link rel="apple-touch-icon" sizes="114x114" href="{{url('/')}}/{{settings()->sitesymol }}" />
+<link rel="apple-touch-icon" sizes="120x120" href="{{url('/')}}/{{settings()->sitesymol }}" />
+<link rel="apple-touch-icon" sizes="144x144" href="{{url('/')}}/{{settings()->sitesymol }}" />
+<link rel="apple-touch-icon" sizes="152x152" href="{{url('/')}}/{{settings()->sitesymol }}" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{url('/')}}/{{settings()->sitesymol }}" />
 
 
 
