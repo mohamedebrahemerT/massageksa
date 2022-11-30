@@ -25,11 +25,7 @@
                     {{ Form::text('name',$Sendcontact->name,['class'=>'form-control name'])  }}
                      </div> 
 
-                     <div class="form-group"> 
-              
-                     {{ Form::label('email', trans('admin.email'))  }}
-                    {{ Form::text('email',$Sendcontact->email,['class'=>'form-control email'])  }}
-                     </div> 
+                    
 
                      <div class="form-group"> 
               

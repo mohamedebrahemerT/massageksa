@@ -172,36 +172,16 @@ class Sendcontactdatatables extends DataTable
 
             ],
 
-            
-
-             [
-                 'name'=> 'email',
-                'data'=> 'email',
-               'title'=>trans('admin.email'),
-
-            ],
+  
               [
                  'name'=> 'phone',
                 'data'=> 'phone',
                'title'=>trans('admin.phone'),
 
             ],
-              [
-                 'name'=> 'CompanyName',
-                'data'=> 'CompanyName',
-               'title'=>trans('admin.CompanyName'),
-
-            ],
-
+              
             
-
-
-             [
-                 'name'=> 'subject',
-                'data'=> 'subject',
-               'title'=>trans('admin.subject'),
-
-            ],
+ 
 
               [
                  'name'=> 'message',

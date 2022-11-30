@@ -23,7 +23,7 @@ class contactforentcontrller extends Controller
                    $data= $this->validate(request(),[
                'name' => ['required', 'string', 'max:255'],
           
-                 'email' =>'required',
+                
                 'phone'    => 'sometimes|nullable|',
           
                 
@@ -33,10 +33,9 @@ class contactforentcontrller extends Controller
             
             ],[],[
           'name'=>trans('admin.fname'),
-          'email'=>trans('admin.email'),
+          
           'phone'=>trans('admin.phone'),
-          'CompanyName'=>trans('admin.CompanyName'),
-          'subject'=>trans('admin.subject'),
+    
           'message'=>trans('admin.message'),
            
        
@@ -53,7 +52,7 @@ class contactforentcontrller extends Controller
              session()->flash('success',trans('admin.subsharesucess'));
           
 
-         return redirect('contact');
+         return back();
                
 
 

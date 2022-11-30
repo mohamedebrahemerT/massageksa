@@ -309,7 +309,7 @@ Route::get('/Storage-Linked', function () {
 
 
 Route::group(['namespace'=>'Forent'],function(){
-Route::get('/','ForentController@index');
+ 
 Route::post('/contact','ForentController@contact');
  
  

@@ -41,6 +41,33 @@
   });
  </script>
 @endsection
+<br>
+<br>
+ @if(session('success'))
+   <div class="alert alert-success " style="text-align: center;">
+   {{session('success')}}
+
+     </div>
+   @endif
+
+          @if(session('danger'))
+   <div class="alert alert-danger " style="text-align: center;">
+   {{session('danger')}}
+
+     </div>
+   @endif
+
+
+   
+                    @if ($errors->any())
+    <div class="alert alert-danger" style="text-align: center;">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
  <!-- Banner Area -->
     <div id="banner" class="banner">
@@ -272,7 +299,7 @@
                                 <input id="name" type="text" name="name" placeholder="{{__('trans.contact3')}}" required>
                             </p>
                             <p>
-                                <input id="phone" type="text" name="phone" placeholder="{{__('trans.contact4')}}" required>
+                                <input id="phone" type="text" name="phone" placeholder="{{__('trans.phone')}}" required>
                             </p>
                             
                             <p>
