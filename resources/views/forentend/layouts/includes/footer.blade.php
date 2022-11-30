@@ -68,7 +68,7 @@
        <script type="text/javascript">
     (function () {
         var options = {
-            whatsapp: "2{{settings()->phone}}", // WhatsApp number
+            whatsapp: "{{settings()->phone}}", // WhatsApp number
             call_to_action: " للدعم او للاستفسارات", // Call to action
             button_color: "#FF6550", // Color of button
             position: "left", // Position may be 'right' or 'left'
