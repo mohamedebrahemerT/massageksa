@@ -73,9 +73,9 @@
                         </div>
                         <div class="col-md-5 hidden-sm hidden-xs">
                             <div class="mock right-style">
-                               
+                                
                                 <img class="front-mock wow fadeInUp" data-wow-duration="1.5s"
-                                     src="{{url('/')}}/{{settings()->siteflag }}" alt="mock front">
+                                     src="{{'landing'}}/images/mocks/1.png" alt="mock front">
                             </div>
                         </div>
                     </div>
@@ -93,8 +93,8 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-3 col-sm-4 text-center">
                         <div class="mock">
-                            <img class="back-mock wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"
-                                 src="{{url('/')}}/{{$WhoWeAre->photo }}" alt="mock back">
+                             
+
                             <img class="front-mock wow fadeInUp" data-wow-duration="1.5s"
                                  src="{{url('/')}}/{{settings()->siteflag }}" alt="mock front">
                         </div>
@@ -165,8 +165,11 @@
                          
                     </div>
                     <div class="col-sm-4 text-center hidden-sm hidden-xs">
-                        <div class="mock wow fadeInUp" data-wow-duration="1.5s"><img class="img-responsive"
-                                                                                     src="{{'landing'}}/images/mocks/1.png" alt="..."></div>
+                        <div class="mock wow fadeInUp" data-wow-duration="1.5s">
+                            <img class="img-responsive"
+                                                                                     src="{{'landing'}}/images/mocks/1.png" alt="...">
+
+                                                                                 </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
            @foreach($departments2 as $department)
@@ -231,7 +234,7 @@
                             <div class="owl-carousel screenshot-carousel" id="screenshot-carousel">
 @foreach(App\Maincategories::get() as $key => $Slider)
 
-                                <img src="{{url('/')}}/{{$Slider->photo}}" alt="App Screenshot">
+                                <img src="{{url('/')}}/{{$Slider->photo}}"  style="height: 300px;">
                                 
                         @endforeach
                                   
